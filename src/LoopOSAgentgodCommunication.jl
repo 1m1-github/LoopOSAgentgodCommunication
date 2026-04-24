@@ -8,7 +8,7 @@ using TheoryOfGodCommunication
 const CREATESOCKET = Ref{Socket}()
 const OBSERVESOCKET = Ref{Socket}()
 
-function init(createipc, observeipc)
+function start(createipc, observeipc)
     CREATESOCKET[] = Socket(REQ)
     OBSERVESOCKET[] = Socket(REQ)
     connect(CREATESOCKET[], createipc)
